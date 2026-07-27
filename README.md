@@ -31,3 +31,8 @@ The extension requests public video search results with `type=video` and `order=
 - This is an unpacked personal-use extension, not a Chrome Web Store listing.
 - YouTube Data API quota limits apply.
 - Never commit an API key. If one is exposed, revoke it in Google Cloud and create a replacement.
+
+## Legal and privacy
+
+- [Privacy Policy](PRIVACY.md)
+- [Disclaimer](DISCLAIMER.md)
