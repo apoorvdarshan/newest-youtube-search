@@ -2,6 +2,10 @@
 
 A local Chrome extension that turns a YouTube search into a chronological list of matching videos. It uses the YouTube Data API's `order=date` search option and preserves YouTube-style result cards.
 
+![Newest for YouTube extension preview](marketing/open-graph-extension.png)
+
+![Newest extension popup](marketing/popup-settings.png)
+
 ## Install locally
 
 1. Download or clone this repository.
