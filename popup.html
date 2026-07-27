@@ -1,0 +1,17 @@
+<!doctype html>
+<html lang="en">
+  <head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>Newest</title><link rel="stylesheet" href="popup.css"></head>
+  <body>
+    <main>
+      <header><p class="eyebrow"><span></span> YouTube search</p><h1>Newest</h1><p>One clean, chronological result list.</p></header>
+      <section>
+        <label for="api-key">YouTube Data API key</label>
+        <div class="key-row"><input id="api-key" type="password" autocomplete="off" placeholder="AIza…"><button id="reveal" type="button" aria-label="Show API key">Show</button></div>
+        <button id="save" class="save" type="button">Save key <span>→</span></button>
+        <p id="status" role="status" aria-live="polite"></p>
+      </section>
+      <footer><span></span><p>Search YouTube normally. Matching videos appear newest first.</p></footer>
+    </main>
+    <script src="popup.js"></script>
+  </body>
+</html>

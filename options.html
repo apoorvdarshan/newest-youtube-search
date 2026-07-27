@@ -1,0 +1,22 @@
+<!doctype html>
+<html lang="en">
+  <head><meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1"><title>Newest — YouTube Search</title><link rel="stylesheet" href="options.css"></head>
+  <body>
+    <main>
+      <header>
+        <p class="eyebrow"><span aria-hidden="true">●</span> Search, in time order</p>
+        <h1>Newest</h1>
+        <p class="intro">Turn YouTube search into a plain chronological list. Your key remains in this Chrome profile.</p>
+      </header>
+      <section class="key-card" aria-labelledby="key-heading">
+        <div class="step"><span>01</span><div><h2 id="key-heading">Connect YouTube Data</h2><p>Paste the API key from your Google Cloud project.</p></div></div>
+        <label for="api-key">API key</label>
+        <div class="key-row"><input id="api-key" type="password" autocomplete="off" spellcheck="false" placeholder="AIza…"><button id="reveal" class="icon-button" type="button" aria-label="Show API key">Show</button></div>
+        <div class="actions"><button id="save" type="button">Save connection <span aria-hidden="true">→</span></button><a href="https://console.cloud.google.com/apis/credentials" target="_blank" rel="noreferrer">Open Google Cloud</a></div>
+        <p id="status" role="status" aria-live="polite"></p>
+      </section>
+      <aside><span class="pulse" aria-hidden="true"></span><p><strong>What happens next</strong> Search YouTube as usual. The extension requests video results ordered from newest to oldest, without recommendation shelves.</p></aside>
+    </main>
+    <script src="options.js"></script>
+  </body>
+</html>

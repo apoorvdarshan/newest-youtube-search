@@ -1,0 +1,5 @@
+# Keep credentials and local Chrome/export artifacts out of the repository.
+*.key
+*.pem
+secrets.*
+.DS_Store

@@ -1,0 +1,19 @@
+{
+  "manifest_version": 3,
+  "name": "YouTube Search: Sort Loaded Results by Date",
+  "version": "1.0.0",
+  "description": "Adds a newest/oldest control for the YouTube search results already loaded in the page.",
+  "permissions": ["storage"],
+  "host_permissions": ["https://www.googleapis.com/*"],
+  "background": { "service_worker": "background.js" },
+  "action": { "default_popup": "popup.html", "default_title": "Newest YouTube Search" },
+  "options_page": "options.html",
+  "content_scripts": [
+    {
+      "matches": ["https://www.youtube.com/results*"],
+      "js": ["content.js"],
+      "css": ["content.css"],
+      "run_at": "document_idle"
+    }
+  ]
+}

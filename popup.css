@@ -1,0 +1,23 @@
+:root { --ink: #0f0f0f; --muted: #606060; --line: #e5e5e5; --red: #ff0033; --red-dark: #cc0029; --surface: #f9f9f9; }
+* { box-sizing: border-box; }
+body { background: radial-gradient(circle at 92% 0%, #ffe3e8, transparent 160px), #fff; color: var(--ink); font: 14px/1.45 Roboto, Arial, sans-serif; margin: 0; width: 360px; }
+main { padding: 25px 22px 19px; }
+header { border-bottom: 1px solid var(--line); padding-bottom: 19px; }
+.eyebrow { color: var(--red); font-size: 10px; font-weight: 800; letter-spacing: .12em; margin: 0 0 9px; text-transform: uppercase; }
+.eyebrow span { background: var(--red); border-radius: 2px; display: inline-block; height: 7px; margin-right: 5px; transform: rotate(45deg); width: 7px; }
+h1 { font-size: 42px; letter-spacing: -.07em; line-height: .85; margin: 0; }
+header > p:last-child { color: var(--muted); margin: 13px 0 0; }
+section { padding: 21px 0 4px; }
+label { display: block; font-size: 12px; font-weight: 750; margin-bottom: 7px; }
+.key-row { display: flex; gap: 7px; }
+input { border: 1px solid #cbd4e5; border-radius: 9px; color: var(--ink); flex: 1; font: 500 13px ui-monospace, SFMono-Regular, Menlo, monospace; min-width: 0; outline: none; padding: 11px; }
+input:focus { border-color: var(--red); box-shadow: 0 0 0 3px #ff00331c; }
+button { border: 0; border-radius: 9px; cursor: pointer; font: inherit; font-weight: 750; }
+.key-row button { background: #f2f2f2; color: var(--ink); font-size: 12px; padding: 0 10px; }
+.save { background: var(--red); color: white; margin-top: 12px; padding: 10px 14px; width: 100%; }
+.save:hover { background: var(--red-dark); }
+.save span { float: right; font-size: 18px; line-height: 14px; }
+#status { color: var(--red-dark); font-size: 12px; font-weight: 650; min-height: 18px; margin: 10px 0 0; }
+footer { align-items: flex-start; border-top: 1px solid var(--line); display: flex; gap: 9px; margin-top: 13px; padding-top: 14px; }
+footer span { background: var(--red); border-radius: 50%; box-shadow: 0 0 0 4px #ff00331a; flex: 0 0 auto; height: 7px; margin-top: 6px; width: 7px; }
+footer p { color: var(--muted); font-size: 12px; margin: 0; }
