@@ -10,4 +10,4 @@ This repository is provided as-is, without warranties. It is not a Chrome Web St
 
 ## Contact the developer
 
-For questions, contact [apurvdarshan@gmail.com](mailto:apurvdarshan@gmail.com), [ad13dtu@gmail.com](mailto:ad13dtu@gmail.com), or [@Apurvdarshan on X](https://x.com/Apurvdarshan).
+For questions, contact [apoorvdarshan@gmail.com](mailto:apoorvdarshan@gmail.com), [ad13dtu@gmail.com](mailto:ad13dtu@gmail.com), or [@apoorvdarshan on X](https://x.com/apoorvdarshan).
