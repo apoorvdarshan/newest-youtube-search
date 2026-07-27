@@ -7,3 +7,7 @@ YouTube is a trademark of Google LLC. This project uses the YouTube Data API and
 Each user is responsible for creating, securing, and using their own YouTube Data API credentials. Do not share, publish, or commit an API key. API availability, quota, search indexing, and the appearance of YouTube pages can change without notice.
 
 This repository is provided as-is, without warranties. It is not a Chrome Web Store listing and is not presented as an official YouTube feature.
+
+## Contact the developer
+
+For questions, contact [apurvdarshan@gmail.com](mailto:apurvdarshan@gmail.com), [ad13dtu@gmail.com](mailto:ad13dtu@gmail.com), or [@Apurvdarshan on X](https://x.com/Apurvdarshan).

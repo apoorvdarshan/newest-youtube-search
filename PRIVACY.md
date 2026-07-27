@@ -20,4 +20,4 @@ Google's handling of requests made to the YouTube Data API is governed by the [G
 
 ## Contact
 
-For questions about this policy, open an issue in this repository.
+For questions about this policy, contact the developer at [apurvdarshan@gmail.com](mailto:apurvdarshan@gmail.com), [ad13dtu@gmail.com](mailto:ad13dtu@gmail.com), or [@Apurvdarshan on X](https://x.com/Apurvdarshan). You can also open an issue in this repository.
