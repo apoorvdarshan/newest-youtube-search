@@ -40,11 +40,17 @@
     target.style.display = "none";
   }
 
+  function restoreYouTubeResults() {
+    document.querySelector("#yt-api-date-results")?.remove();
+    const results = document.querySelector("ytd-section-list-renderer");
+    if (results) results.style.display = "";
+  }
+
   async function loadTrueNewestResults() {
     const query = searchQuery();
     if (!query || apiSearchStartedFor === query) return;
-    const { youtubeApiKey } = await chrome.storage.local.get("youtubeApiKey");
-    if (!youtubeApiKey) return;
+    const { youtubeApiKey, extensionEnabled } = await chrome.storage.local.get(["youtubeApiKey", "extensionEnabled"]);
+    if (!youtubeApiKey || extensionEnabled === false) return;
     apiSearchStartedFor = query;
     try {
       const params = new URLSearchParams({ part: "snippet", type: "video", order: "date", maxResults: "50", q: query, key: youtubeApiKey });
@@ -120,10 +126,14 @@
 
   document.addEventListener("yt-navigate-finish", () => {
     apiSearchStartedFor = "";
-    document.querySelector("#yt-api-date-results")?.remove();
-    const results = document.querySelector("ytd-section-list-renderer");
-    if (results) results.style.display = "";
+    restoreYouTubeResults();
     loadTrueNewestResults();
+  });
+  chrome.storage.onChanged.addListener((changes, area) => {
+    if (area !== "local" || !changes.extensionEnabled) return;
+    apiSearchStartedFor = "";
+    if (changes.extensionEnabled.newValue === false) restoreYouTubeResults();
+    else loadTrueNewestResults();
   });
   loadTrueNewestResults();
 })();

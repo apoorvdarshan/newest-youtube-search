@@ -5,6 +5,10 @@
     <main>
       <header><p class="eyebrow"><span></span> YouTube search</p><h1>Newest</h1><p>One clean, chronological result list.</p></header>
       <section>
+        <div class="extension-state">
+          <div><p class="state-label">Extension</p><p id="state-copy">Newest-first search is on.</p></div>
+          <label class="switch" for="extension-enabled"><input id="extension-enabled" type="checkbox" role="switch" aria-label="Turn Newest for YouTube on or off"><span aria-hidden="true"></span></label>
+        </div>
         <label for="api-key">YouTube Data API key</label>
         <div class="key-row"><input id="api-key" type="password" autocomplete="off" placeholder="AIza…"><button id="reveal" type="button" aria-label="Show API key">Show</button></div>
         <button id="save" class="save" type="button">Save key <span>→</span></button>

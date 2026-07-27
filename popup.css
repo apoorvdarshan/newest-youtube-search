@@ -8,6 +8,16 @@ header { border-bottom: 1px solid var(--line); padding-bottom: 19px; }
 h1 { font-size: 42px; letter-spacing: -.07em; line-height: .85; margin: 0; }
 header > p:last-child { color: var(--muted); margin: 13px 0 0; }
 section { padding: 21px 0 4px; }
+.extension-state { align-items: center; background: #fafafa; border: 1px solid var(--line); border-radius: 12px; display: flex; justify-content: space-between; margin: 0 0 19px; padding: 12px 13px; }
+.state-label { font-size: 12px; font-weight: 800; margin: 0 0 2px; }
+#state-copy { color: var(--muted); font-size: 12px; margin: 0; }
+.switch { cursor: pointer; display: inline-flex; flex: 0 0 auto; margin: 0; }
+.switch input { height: 1px; opacity: 0; position: absolute; width: 1px; }
+.switch span { background: #b5b5b5; border-radius: 999px; display: block; height: 24px; position: relative; transition: background .16s ease; width: 43px; }
+.switch span::after { background: white; border-radius: 50%; box-shadow: 0 1px 3px #0004; content: ""; height: 18px; left: 3px; position: absolute; top: 3px; transition: transform .16s ease; width: 18px; }
+.switch input:checked + span { background: var(--red); }
+.switch input:checked + span::after { transform: translateX(19px); }
+.switch input:focus-visible + span { box-shadow: 0 0 0 3px #ff00331c; }
 label { display: block; font-size: 12px; font-weight: 750; margin-bottom: 7px; }
 .key-row { display: flex; gap: 7px; }
 input { border: 1px solid #cbd4e5; border-radius: 9px; color: var(--ink); flex: 1; font: 500 13px ui-monospace, SFMono-Regular, Menlo, monospace; min-width: 0; outline: none; padding: 11px; }

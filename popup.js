@@ -1,9 +1,24 @@
 const input = document.querySelector("#api-key");
 const status = document.querySelector("#status");
+const enabledInput = document.querySelector("#extension-enabled");
+const stateCopy = document.querySelector("#state-copy");
 
-chrome.storage.local.get("youtubeApiKey", ({ youtubeApiKey }) => {
+function setEnabledUi(enabled) {
+  enabledInput.checked = enabled;
+  stateCopy.textContent = enabled ? "Newest-first search is on." : "YouTube search stays untouched.";
+}
+
+chrome.storage.local.get(["youtubeApiKey", "extensionEnabled"], ({ youtubeApiKey, extensionEnabled }) => {
   input.value = youtubeApiKey || "";
+  setEnabledUi(extensionEnabled !== false);
   if (youtubeApiKey) status.textContent = "Connected — refresh YouTube to apply changes.";
+});
+
+enabledInput.addEventListener("change", async () => {
+  const extensionEnabled = enabledInput.checked;
+  await chrome.storage.local.set({ extensionEnabled });
+  setEnabledUi(extensionEnabled);
+  status.textContent = extensionEnabled ? "Enabled. Refresh YouTube to apply changes." : "Disabled. YouTube is restored.";
 });
 
 document.querySelector("#save").addEventListener("click", async () => {
